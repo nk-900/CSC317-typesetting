@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap");
 
 html {
+    background: #e1ddd4;
     font-family: "Lora", serif;
-    font-size: 62.5%;
+    font-size: 10px;
+}
+
+body {
+    color: #222222;
 }
 
 h1, h2, nav li a {
@@ -53,35 +58,67 @@ header, footer {
 }
 
 /* END - Provided code */
-
-/* Typography */
-h1 {
-    font-size: 3rem;
-    text-align: center;
-    letter-spacing: 0.2rem;
+header, section, aside, nav, footer {
+    padding: 20px;
+    background-color: #fbf7f3;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-h2, nav li a {
-    letter-spacing: 0.08rem;
+header {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5f5f5f;
+}
+
+h1, h2, nav li a {
+    font-family: "Roboto Slab", serif;
+}
+
+h1 {
+    background: linear-gradient(to bottom, #aa6666, #773333);
+    padding: 20px;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2);
+    font-size: 3.2rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: #ffffff;
+    border-radius: 8px;
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 0;
+    letter-spacing: 0.1rem;
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    color: #442222;
 }
 
 section h2 + p {
-    text-indent:1.25rem;
+    text-indent: 1.25rem;
 }
 
 p, li {
-    line-height: 1.6;
+    line-height: 1.7;
     letter-spacing: 0.03rem;
     word-spacing: 0.05rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    max-width: 90ch;
 }
 
-/* Link sections */
 a {
     text-decoration: underline;
     outline: none;
@@ -93,7 +130,7 @@ a:link, a:visited {
 
 a:hover, a:focus {
     text-decoration: none;
-    color: #773333;
+    color: #774444;
 }
 
 a:active {
@@ -109,48 +146,61 @@ a[href^="http"] {
     background-size: 14px 14px;
 }
 
-/* List section */
-ul, ol {
-    margin: 1rem 0;
+section, aside, nav {
+    float: left;
 }
 
-ul {
-    list-style-type: square;
+section {
+    width: 48%;
+    margin-right: 2%;
 }
 
-ol {
-    list-style-type: lower-roman;
+aside {
+    width: 24%;
+    margin-right: 2%;
 }
 
-/* Nav section */
+nav {
+    width: 24%;
+    background: linear-gradient(to bottom, #f4ece9, #f0e3df);
+}
 
 nav ul {
-    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     margin: 0;
+    padding: 0;
 }
 
 nav li {
-    list-style-type: none;
-    margin-bottom: 1rem;
+    list-style: none;
 }
 
 nav li a {
     display: block;
-    width: 100%;
-    line-height: 3.2;
+    padding: 12px 0;
+    border-radius: 6px;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 700;
     text-decoration: none;
     border: 1px solid #aa6666;
+    background-color: #ffffff;
 }
 
-nav li a:hover, nav li a:focus {
+nav li a:hover,
+nav li a:focus {
     background-color: #aa6666;
     color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }
 
 nav li a:active {
     background-color: #773333;
     color: #ffffff;
+}
+
+footer {
+    clear: both;
 }
